@@ -370,14 +370,14 @@ const psResponses = {
         <script>
             let table = "<table border='1' cellspacing='0' cellpadding='10'><tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
             for (let i = 0; i <= 10; i++) {
-                table += '<tr><td>${i}</td><td>${i ** 2}</td><td>${i ** 3}</td></tr>';
+                table += '<tr><td>$'{i}</td><td>$'{i ** 2}</td><td>$'{i ** 3}</td></tr>';
             }
             table += "</table>";
             document.getElementById("table-container").innerHTML = table;
         </script>
     </body>
     </html>
-   <!-- use tilda instead of single quotes '<tr><td>${i}</td><td>${i ** 2}</td><td>${i ** 3}</td></tr>'-->
+   <!-- use tilda instead of single quotes '<tr><td>$'{i}</td><td>$'{i ** 2}</td><td>$'{i ** 3}</td></tr>'-->
    <!--	1.	HTML:-->
 	<!--•	A div with id="table-container" where the dynamically created table will be displayed.-->
 	<!--2.	JavaScript:-->
@@ -507,7 +507,7 @@ const psResponses = {
               const matches = keywords.filter(keyword => keyword.toLowerCase().includes(query));
 
               if (matches.length > 0) {
-                  resultsDiv.innerHTML = "<h3>Results:</h3><ul>" + matches.map(match => '<li>${match}</li>').join("") + "</ul>";
+                  resultsDiv.innerHTML = "<h3>Results:</h3><ul>" + matches.map(match => '<li>$'{match}</li>').join("") + "</ul>";
               } else {
                   resultsDiv.innerHTML = "<h3>No results found</h3>";
               }
@@ -533,7 +533,7 @@ const psResponses = {
   <!--	•	Minimal Code: Simple structure with inline styles.-->
   <!--	•	Basic Search: Filters and displays the results based on predefined keywords like JavaScript, HTML, CSS, etc.-->
   <!--	•	Responsive: The layout adapts to the screen size because of flexbox.-->
-  <!--use tilde instead of single quotes '<li>${match}</li>-->'`,
+  <!--use tilde instead of single quotes '<li>$'{match}</li>-->'`,
 
   9: `<!--Here is the minimal JavaScript code to design a simple calculator that performs the following operations: sum, product, difference, and quotient.-->
 
